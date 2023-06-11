@@ -1,0 +1,114 @@
+  html, body {
+    /* margin: 0; */
+    /* width: 100px; */
+    background-image: url(https://as2.ftcdn.net/v2/jpg/04/43/48/37/1000_F_443483797_5ispQQU0zMzoJuv1zEiaKn5l75c2wklV.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background: center center cover no-repeat fixed;
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* the background color of the top shaderline on the webpage where the nav and home background icon will change */
+header {
+    background-color: #262626;
+}
+
+li{
+    list-style: none;
+}
+/* to change the text color on the shaded line */
+a{
+    coLor: rgb(255, 255, 255);
+    text-decoration: none;
+}
+/* to change the size of the hoome background  shaded portion only */
+.navbar{
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+/* //changes the size of home */
+.nav-branding{
+    font-size: 2rem;
+}
+/* the transistion for the menue to either appear or go away */
+.nav-link{
+    transition: 0.7s ease;
+}
+/* hovering over the words greeting,etc will change the color */
+.nav-link:hover{
+    color: rgb(18, 74, 125);
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+/* lines 51-58 can change the hamburger menue and x icon respectivly */
+.bar{
+    display: block;
+    width: 25px; 
+    height: 3px;
+    margin: 5px auto;
+    background-color: rgb(98, 9, 9);
+}
+/* The @media rule is used in media queries to apply different styles for
+ different media types/devices. Media queries can be used to check many things,
+  such as: width and height of the viewport. width and height of the device. */
+  /* the 1920 is like the screen resolution is hence how far can i/want to extend the 
+  nav bar portion only so it can collapse properly on certain screen reso */
+
+@media(max-width:1920px){
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    /* line 74-79 is essentially making the hamburger bars become an x */
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+   
+    /* lines 82-92 can customize the shaded portion of the hamburger menue when it drops down
+     */
+
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #0a0a0a;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+/* changes the background lenghtof the hamburger dropdown menue */
+    .nav-item{
+        margin: 10px 0;
+    }
+ /* this line indicates where the drop down menue will appear. */
+    .nav-menu.active{
+        left: 0;
+    }
+}
