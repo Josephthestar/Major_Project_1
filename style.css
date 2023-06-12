@@ -1,7 +1,8 @@
   html, body {
     /* margin: 0; */
     /* width: 100px; */
-    background-image: url(https://as2.ftcdn.net/v2/jpg/04/43/48/37/1000_F_443483797_5ispQQU0zMzoJuv1zEiaKn5l75c2wklV.jpg);
+    /* keep background image to not be able to change background image,or remove background image to be allowed to randomly change the photo. */
+    /* background-image: url(''); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -70,10 +71,12 @@ a{
 /* The @media rule is used in media queries to apply different styles for
  different media types/devices. Media queries can be used to check many things,
   such as: width and height of the viewport. width and height of the device. */
-  /* the 1920 is like the screen resolution is hence how far can i/want to extend the 
+  /* the 5000 is like the screen resolution is hence how far can i/want to extend the 
   nav bar portion only so it can collapse properly on certain screen reso */
+  /* the @media rule  i wouldint have been able to do this without w3-schools guid on what is @media https://www.w3schools.com/cssref/css3_pr_mediaquery.php */
 
-@media(max-width:1920px){
+
+@media(max-width:5000px){
     .hamburger{
         display: block;
     }
