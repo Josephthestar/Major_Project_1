@@ -8,64 +8,106 @@
   <style>
     body {
       background-image: url('https://free4kwallpapers.com/uploads/originals/2023/03/04/our-little-beautiful-home-wallpaper.jpg');
-      background-repeat: no-repeat;
       background-size: cover;
-      background-position: center center;
     }
   
     .box {
-  width: 200px;
-  height: 200px;
-  background-color: #006676;
-  border: 1px solid #f900aa;
-  padding: 20px;
-  position: relative;
-}
+      width: 100%; /* Make boxes take full width on smaller screens */
+      max-width: 400px; /* Limit maximum width for larger screens */
+      background-color: #006676;
+      border: 1px solid #f900aa;
+      padding: 20px;
+      margin: 10px auto; /* Center the boxes horizontally */
+      position: relative;
+      overflow: auto; /* Add overflow property for scrolling */
+    }
+    #box1 {
+      top: 0px;
+      left: 10px;
+    }
 
-#box1 {
-  top: 0px;
-  left: 010px;
-}
+    #box2 {
+      top: 50px;
+      left: 10px;
+    }
+    
+    #box3 {
+      top: 10px;
+      left: 10px;
+    } 
+    #box4 {
+      top: 150px;
+      left: 10px;
+    } 
 
-#box2 {
-  top: -240px;
-  left: 275px;
-}
-#box3 {
-  top: -485px;
-  left: 550px;
-} 
-
+    @media screen and (min-width: 768px) {
+      .box {
+        display: inline-block; /* Align boxes side by side on larger screens */
+        vertical-align: top; /* Align boxes at the top */
+        margin: 10px; /* Add some space between boxes */
+      }
+    }
   </style>
 </head>
 <body>
   <div class="wrapper">
-    <!-- <div class="one"></div>  this is how to make a line on the webpage -->
     <a href="#" class="nav">
-        <div class="one"></div> 
-        <div class="two"></div> 
-        <div class="three"></div> 
-        
-
+      <div class="one"></div> 
+      <div class="two"></div> 
+      <div class="three"></div> 
     </a>
     <div class="box" id="box1">
-        <p>will be updated as course goes on.</p>
-      </div>
-      
-      <div class="box" id="box2">
-        <p>will be updated as course goes on</p>
-      </div>
-      
-      <div class="box" id="box3">
-        <p>will be updated as course goes on</p>
-      </div>
-
-
+      <p>1)-Successfully completed 480 hours of expert-led instruction in JavaScript, Python, React, Django, Node.js, 
+        and hands-on learning of full-stack software development in the industry's most in-demand technologies.
+        Successfully completed 480 hours of expert-led instruction in JavaScript, Python, React, Django, Node.js, and
+         hands-on learning of full-stack software development in the industry's most in-demand technologies.</p>
+    </div>
+    <div class="box" id="box2">
+      <p>
+        2)-Having successfully completed an immersive software engineering course, 
+        I am now equipped with a robust toolkit of skills ready to be applied in the professional realm. 
+        With a deep understanding of programming languages, web development frameworks, and software design principles,
+         I'm excited to bring innovation to the forefront of any project I'm part of. 
+         My comprehensive training spans JavaScript, Python, React, Django, Node.js, and more, 
+         providing me with a solid foundation to tackle real-world challenges. 
+         I'm eager to channel this knowledge and passion into meaningful work, contributing 
+         my expertise to create impactful and cutting-edge software solutions.</p>
+    </div>
+    <div class="box" id="box3">
+      <p>
+        3)-My journey through the software engineering immersive course has been an exhilarating experience of growth and transformation. 
+        Starting with a curiosity-driven mindset, I delved into the intricate world of coding languages, algorithms, and software development methodologies. 
+        Through hands-on projects, I not only gained a deep understanding of languages like JavaScript and Python but also learned how to architect complex applications from scratch.
+        
+        The course's immersive nature exposed me to real-world challenges, mimicking the intensity of professional software development.
+         Collaborating with peers on group projects mirrored the dynamics of a tech team, teaching me how to communicate ideas effectively and contribute to a shared vision.
+        
+        As I conquered hurdles and overcame coding obstacles, my problem-solving skills soared.
+         Debugging became a puzzle to unravel, and each successful solution added to my confidence. 
+         The guidance of experienced mentors provided invaluable insights, while regular code reviews instilled discipline and best practices.
+        
+        Reflecting on this journey, I am now equipped with a versatile skill set that goes beyond coding itself. 
+        The course nurtured my ability to approach complex problems strategically, design efficient solutions, and adapt to ever-evolving technologies.
+        
+        This immersive experience has not only ignited a passion for software engineering but also ingrained in me a mindset of continuous learning. 
+        I am excited to channel these newly acquired skills into meaningful projects, confident in my ability to contribute to the ever-expanding world of technology.</p>
+    </div>
+    <div class="box" id="box4">
+      <p>
+        4)-In the culmination of my bachelor's degree, I embarked on an ambitious capstone project that encapsulated the intersection of mechanical engineering and innovative design. 
+        My project focused on the creation of an exoskeleton lift support system cleverly integrated into a backpack. 
+        This novel solution aimed to augment human strength and endurance, particularly in scenarios demanding heavy lifting or repetitive tasks.
+        
+        Drawing inspiration from my aerospace and mechanical studies, I meticulously engineered this exoskeleton backpack to seamlessly align with the body's biomechanics. 
+        By leveraging cutting-edge materials and precision engineering, I sought to alleviate physical strain and enhance the user's performance while maintaining comfort and mobility.
+        
+        My capstone project not only challenged me to apply a diverse array of engineering principles but also ignited my enthusiasm for crafting practical solutions that have the potential to revolutionize industries. 
+        Through this endeavor, I not only deepened my technical skills but also cultivated a mindset of innovation that I carry forward as I venture into the realms of software engineering and technology.</p>
+    </div>
     <div class="style">
-    <h4>Joseph R Home</h4>
-    <a href="a" Class="btn_One"></a>
-   </div>
-</div>
-
+      <h4>Joseph R Home</h4>
+      <a href="http://127.0.0.1:5500/index.html" class="btn_One">Go back to the home page</a>
+    </div>
+  </div>
 </body>
 </html>

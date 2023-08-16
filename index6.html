@@ -8,64 +8,71 @@
   <style>
     body {
       background-image: url('https://wallpaperaccess.com/full/1414168.jpg');
-      background-repeat: no-repeat;
       background-size: cover;
-      background-position: center center;
     }
   
     .box {
-  width: 200px;
-  height: 200px;
-  background-color: #006676;
-  border: 1px solid #f900aa;
-  padding: 20px;
-  position: relative;
-}
+      width: 200px;
+      height: 200px;
+      background-color: #006676;
+      border: 1px solid #f900aa;
+      padding: 20px;
+      position: relative;
+    }
 
-#box1 {
-  top: 0px;
-  left: 010px;
-}
+    #box1 {
+      top: 0px;
+      left: 10px;
+    }
 
-#box2 {
-  top: -240px;
-  left: 275px;
-}
-#box3 {
-  top: -485px;
-  left: 550px;
-} 
+    #box2 {
+      top: -240px;
+      left: 275px;
+    }
 
+    #box3 {
+      top: -485px;
+      left: 550px;
+    } 
   </style>
+  <script>
+    function copyToClipboard(email) {
+      const textarea = document.createElement('textarea');
+      textarea.value = email;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      alert('Email address copied to clipboard: ' + email);
+    }
+  </script>
 </head>
 <body>
   <div class="wrapper">
-    <!-- <div class="one"></div>  this is how to make a line on the webpage -->
     <a href="#" class="nav">
-        <div class="one"></div> 
-        <div class="two"></div> 
-        <div class="three"></div> 
-        
-
+      <div class="one"></div> 
+      <div class="two"></div> 
+      <div class="three"></div> 
     </a>
     <div class="box" id="box1">
-        <p><a href="https://www.linkedin.com/feed/">My linkedin</a></a>.</p>
-      </div>
+      <p><a href="https://www.linkedin.com/in/joseph-rihan-71937256/" target="_blank">My LinkedIn</a></p>
+    </div>
       
-      <div class="box" id="box2">
-        <p><a href="https://github.com/Josephthestar">My github</a></a></p>
-      </div>
+    <div class="box" id="box2">
+      <p><a href="https://github.com/Josephthestar" target="_blank">My GitHub</a></p>
+    </div>
       
-      <div class="box" id="box3">
-        <p></p>
-      </div>
-
+    <div class="box" id="box3">
+      <p><a href="javascript:void(0);" onclick="copyToClipboard('Joseph.Rihan@Yahoo.Com')">Copy Email</a></p>
+    </div>
 
     <div class="style">
-    <h4>Joseph R Links</h4>
-    <a href="a" Class="btn_One"></a>
-   </div>
-</div>
-
+      <h4>Joseph R Links</h4>
+      <div class="style">
+        <h4>Joseph R Home</h4>
+        <a href="http://127.0.0.1:5500/index.html" class="btn_One">Go back to the home page</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
